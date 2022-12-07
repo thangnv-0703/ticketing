@@ -7,6 +7,8 @@ import { TicketUpdatedListener } from './events/listeners/ticket-updated-listene
 import { natsWrapper } from './nats-wrapper';
 
 const start = async () => {
+  console.log('Starting up orders service ...');
+
   if (!process.env.NATS_URL) {
     throw new Error('NATS_URL must be defined');
   }
